@@ -17,6 +17,8 @@ Django Javascript Logger
 .. image:: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white
     :target: https://github.com/pre-commit/pre-commit
 
+|
+
 Simple Django app for logging Javascript's ``console.log`` logs to Django.
 
 Useful for catching Javascript errors that are not logged by Django natively and would otherwise only be logged to the client's console.
@@ -24,10 +26,10 @@ Useful for catching Javascript errors that are not logged by Django natively and
 The app works by posting all logs to an internal API; because of this, it should likely not be run in performance-sensitive production environments.
 
 .. image:: docs/img/chart.png
-  :align: center
+  :align: right
   :alt: Flowchart
 
-If you want to implement this package, and require extra functionality (like the ability to set custom, dynamic headers) please feel free to commit an issue. Otherwise, this currently does exactly what I need it to do, and I likely won't change it.
+If you want to implement this package, and require extra functionality please feel free to commit an issue or a PR. Otherwise, this currently does exactly what I need it to do, and I likely won't change it.
 
 Quick start
 -----------
