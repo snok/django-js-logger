@@ -28,7 +28,7 @@ The structure is very simple. The app simply has an API that receives logs from 
   :align: center
   :alt: Flowchart
 
-If you want to implement this, and need to add custom headers or other functionality, please commit an issue. Otherwise, this currently does exactly what I need it to do.
+If you want to implement this package, and require extra functionality (like the ability to set custom, dynamic headers) please feel free to commit an issue. Otherwise, this currently does exactly what I need it to do, and I likely won't change it.
 
 Quick start
 -----------
