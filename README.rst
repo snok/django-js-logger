@@ -91,7 +91,7 @@ Quick start
 
 
 
-4. Include the template where you wish::
+4. Include the template where ever you wish for logs to be sent in from (perhaps a base or header template)::
 
     <head>
     ...
