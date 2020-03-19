@@ -1,6 +1,6 @@
-    path('js-logs/', include('js.urls')),
+0.1.0 (20-03-2020)
+------------------
 
-        'console.log': {
-            'handlers': default_handler,
-            'level': 'DEBUG',
-        },
+- First public release.
+- Provides full Django-logging for javascript loggers and errors.
+- Implements CSRFToken header.

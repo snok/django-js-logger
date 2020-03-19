@@ -25,7 +25,7 @@ setup(
     keywords=['console', 'log', 'logging', 'javascript', 'django'],
     platforms='OS Independent',
     classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
+        'Development Status :: 4 - Beta',
         'Environment :: Web Environment',
         'Framework :: Django',
         'Framework :: Django :: 2.2',
