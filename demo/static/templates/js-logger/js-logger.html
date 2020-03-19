@@ -1,0 +1,39 @@
+<script type="text/javascript">
+
+    function readCookie(name) {
+        let nameEQ = name + "=";
+        let ca = document.cookie.split(';');
+        for (let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
+
+    // I personally need this for my project - if you read this and need something else / this is causing issues
+    // then please commit and issue, and i'll fix it.
+    const CSRFToken = readCookie('csrftoken');
+
+    function post(type, msg) {
+        /* Sends logs to a backend API, which logs the message to a python logger */
+        fetch('/js-logs/', {
+                method: 'POST',
+                headers: {'X-CSRFToken': CSRFToken, 'Content-Type': 'application/json'},
+                body: JSON.stringify({'type': type, 'msg': msg})
+            }
+        );
+    }
+
+    // Event listener for error events for posting errors to the backend
+    window.addEventListener('error', (event) => {
+        post('error', event.message);
+    });
+
+    // Patch console.log function to post all other logs to the backend
+    console._overwritten = console.log;
+    console.log = function (log) {
+        post('info', log);
+        console._overwritten(log);
+    }
+</script>

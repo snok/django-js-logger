@@ -11,13 +11,15 @@
         return null;
     }
 
-    const csrftoken = readCookie('csrftoken');
+    // I personally need this for my project - if you read this and need something else / this is causing issues
+    // then please commit and issue, and i'll fix it.
+    const CSRFToken = readCookie('csrftoken');
 
     function post(type, msg) {
         /* Sends logs to a backend API, which logs the message to a python logger */
         fetch('/js-logs/', {
                 method: 'POST',
-                headers: {'X-CSRFToken': csrftoken, 'Content-Type': 'application/json'},
+                headers: {'X-CSRFToken': CSRFToken, 'Content-Type': 'application/json'},
                 body: JSON.stringify({'type': type, 'msg': msg})
             }
         );

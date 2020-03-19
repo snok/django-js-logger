@@ -48,26 +48,42 @@ Quick start
 3. Add the required static file to your project by running ``manage.py collectstatic``, or by manually adding the following code to ``<your-templates-folder>/js-logging/js-logging.html``::
 
     <script type="text/javascript">
-        function post(type, msg) {
-            let headers;
-            if (window.jsLoggerHeader) {
-                headers = window.jsLoggerHeader;
-            } else {
-                headers = {'Content-Type': 'application/json'};
+
+        function readCookie(name) {
+            let nameEQ = name + "=";
+            let ca = document.cookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
             }
-            fetch('/js-logs/', {method: 'POST', headers: headers, body: JSON.stringify({'type': type, 'msg': msg})});
+            return null;
+        }
+        const CSRFToken = readCookie('csrftoken');
+
+        function post(type, msg) {
+            /* Sends logs to a backend API, which logs the message to a python logger */
+            fetch('/js-logs/', {
+                    method: 'POST',
+                    headers: {'X-CSRFToken': CSRFToken, 'Content-Type': 'application/json'},
+                    body: JSON.stringify({'type': type, 'msg': msg})
+                }
+            );
         }
 
+        // Event listener for error events for posting errors to the backend
         window.addEventListener('error', (event) => {
             post('error', event.message);
         });
 
+        // Patch console.log function to post all other logs to the backend
         console._overwritten = console.log;
         console.log = function (log) {
             post('info', log);
             console._overwritten(log);
         }
     </script>
+
 
 
 4. Include the template where you wish::

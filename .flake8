@@ -49,6 +49,7 @@ exclude = .
     */migrations/*,
     */models.py,
     */tests/*,
+    demo,
 
 max-complexity = 20
 
