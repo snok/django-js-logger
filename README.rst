@@ -21,10 +21,9 @@ Simple Django app for logging Javascript's ``console.log`` logs to Django.
 
 Useful for catching Javascript errors that are not logged by Django natively and would otherwise only be logged to the client's console.
 
-The structure is very simple. The app simply has an API that receives logs from the client. Because of this, you likely want to avoid running this in production.
+The app works by posting all logs to an internal API; because of this, it should likely not be run in performance-sensitive production environments.
 
 .. image:: docs/img/chart.png
-  :width: 600
   :align: center
   :alt: Flowchart
 
