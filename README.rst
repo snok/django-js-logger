@@ -25,7 +25,7 @@ Useful for catching Javascript errors that are not logged by Django natively and
 
 The app works by posting all logs to an internal API; because of this, it should likely not be run in performance-sensitive production environments.
 
-.. image:: docs/img/chart.png
+.. image:: docs/img/flowchart.png
   :align: right
   :alt: Flowchart
 
