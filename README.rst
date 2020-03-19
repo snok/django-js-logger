@@ -11,6 +11,9 @@ Django Javascript Logger
 .. image:: https://img.shields.io/pypi/djversions/django-js-logger.svg
     :target: https://pypi.python.org/pypi/django-js-logger
 
+.. image:: https://codecov.io/gh/sondrelg/django-ls-logger/branch/master/graph/badge.svg
+    :target: https://codecov.io/gh/sondrelg/django-ls-logger
+
 .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
     :target: https://pypi.org/project/django-swagger-tester/
 
