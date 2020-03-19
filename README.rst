@@ -17,14 +17,21 @@ Django Javascript Logger
 .. image:: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white
     :target: https://github.com/pre-commit/pre-commit
 
-Simple app for logging javascript `console.log` logs in Django.
+Simple Django app for logging Javascript's ``console.log`` logs to Django.
 
-Useful for catching javascript errors that are not logged by Django natively.
+Useful for catching Javascript errors that are not logged by Django natively and would otherwise only be logged to the client's console.
+
+.. mermaid::
+    graph TD
+    U([urls.py]) --> A([API])
+    A --> | logs as info error logger| L([Django logging]) --> TH(3rd party?)
+
+    C(Client) --> T[ Django template] --> I[External JS-logger template] --> J[Javascript] --> A
 
 Quick start
 -----------
 
-1. Add "js_logger" to your INSTALLED_APPS setting like this::
+1. Add "js_logger" to your INSTALLED_APPS settings::
 
     INSTALLED_APPS = [
         ...
@@ -77,22 +84,3 @@ Quick start
     },
 
 Note: This package will log all `console.log` calls in your frontend as ``INFO`` logs, and will log javascript errors as ``ERROR`` logs.
-
-Custom headers
---------------
-
-Since this package works by sending requests to your backend, you might find that it is necessary to add CSRF-tokens or other headers to make the requests work.
-
-To set your own custom headers, simply define a variable, ``jsLoggerHeader`` that contains the headers you want to include, and this will be passed as the `headers` object in the requests made to the backend.
-
-For example, in your template::
-
-    <head>
-        {% include "js-logging/js-logging.html" %}
-    </head>
-    ...
-    <script>
-        ...
-        let jsLoggerHeader =  {'X-CSRFToken': csrftoken, 'Content-Type': 'application/json'}
-        ...
-    </script>
