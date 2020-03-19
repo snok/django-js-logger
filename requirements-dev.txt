@@ -1,0 +1,7 @@
+# Local dev
+pre-commit==2.2.0
+
+# Publish to pypi
+setuptools==44.0.0
+twine==3.1.1
+wheel==0.33.6

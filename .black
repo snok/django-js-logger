@@ -1,0 +1,8 @@
+[tool.black]
+line-length = 140
+skip-string-normalization = true
+target-version = ['py38']
+include = '\.pyi?$'
+exclude = '''
+/(\.eggs|\.git|\.hg|\.mypy_cache|\.tox|\.venv|\venv|\migrations|\static|\__pycache__)
+'''

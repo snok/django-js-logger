@@ -1,0 +1,96 @@
+[flake8]
+accept-encodings = utf-8,utf-16
+ignore=
+    # E501: Line length
+    E501
+    # E266: Checks whether a comment has multiple #
+    E266
+    # F403: Checks that there are no * imports
+    F405
+    F403
+    # E231: Checks for whitespace after ,
+    E231
+    # F401: Checks for unused imports - we normally want to exclude unused imports, but this is also triggered when
+    # using `from datetime import datetime` and then using datetime.strptime in the code
+    F401
+
+    # Docstring at the top of a public module
+    D100
+    # Docstring at the top of a public class (method is enough)
+    D101
+    # Docstring in public package
+    D104
+    # Make docstrings one line if it can fit.
+    D200
+    # Imperative docstring declarations
+    D401
+    # 1 blank line required between summary line and description
+    D205
+
+    # Type annotation for `self`
+    TYP101
+    # Missing type annotations for `**kwargs`
+    TYP003
+
+    # Whitespace before ':'. Black formats code this way.
+    E203
+
+    # Line break before binary operator
+    W503
+
+    # Missing docstring in public nested class - this is triggered for meta classes in swagger docs
+    D106
+
+exclude = .
+    .git,
+    __pycache__,
+    static,
+    manage.py,
+    */migrations/*,
+    */models.py,
+    */tests/*,
+
+max-complexity = 20
+
+
+[mypy]
+# Specify the target platform details in config, so your developers are
+# free to run mypy on Windows, Linux, or macOS and get consistent
+# results.
+python_version=3.8
+platform=windows
+
+# flake8-mypy expects the two following for sensible formatting
+show_column_numbers=True
+show_error_context=False
+
+# do not follow imports (except for ones found in typeshed)
+follow_imports=skip
+
+# since we're ignoring imports, writing .mypy_cache doesn't make any sense
+cache_dir=/dev/null
+
+# suppress errors about unsatisfied imports
+ignore_missing_imports=True
+
+# allow untyped calls as a consequence of the options above
+disallow_untyped_calls=False
+
+# allow returning Any as a consequence of the options above
+warn_return_any=False
+
+# treat Optional per PEP 484
+strict_optional=True
+
+# ensure all execution paths are returning
+warn_no_return=True
+
+# lint-style cleanliness for typing needs to be disabled; returns more errors
+# than the full run.
+warn_redundant_casts=False
+warn_unused_ignores=False
+
+# The following are off by default since they're too noisy.
+# Flip them on if you feel adventurous.
+disallow_untyped_defs=False
+check_untyped_defs=False
