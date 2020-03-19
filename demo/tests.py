@@ -6,7 +6,6 @@ driver = Chrome()
 
 
 class TestLogging(StaticLiveServerTestCase):
-
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
@@ -42,7 +41,6 @@ class TestLogging(StaticLiveServerTestCase):
 
 
 class TestApi(APISimpleTestCase):
-
     def test_bad_data(self):
         """
         Make sure we're logging a warning when the "pipeline" fails.

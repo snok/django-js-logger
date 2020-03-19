@@ -3,43 +3,14 @@ accept-encodings = utf-8,utf-16
 ignore=
     # E501: Line length
     E501
-    # E266: Checks whether a comment has multiple #
-    E266
-    # F403: Checks that there are no * imports
-    F405
-    F403
-    # E231: Checks for whitespace after ,
-    E231
-    # F401: Checks for unused imports - we normally want to exclude unused imports, but this is also triggered when
-    # using `from datetime import datetime` and then using datetime.strptime in the code
-    F401
-
-    # Docstring at the top of a public module
+    # D100 Missing docstring in public module
     D100
-    # Docstring at the top of a public class (method is enough)
+    # D100 Missing docstring in public class
     D101
-    # Docstring in public package
-    D104
-    # Make docstrings one line if it can fit.
+    # D200 One-line docstring should fit on one line with quotes -- why
     D200
-    # Imperative docstring declarations
-    D401
-    # 1 blank line required between summary line and description
-    D205
-
-    # Type annotation for `self`
-    TYP101
-    # Missing type annotations for `**kwargs`
-    TYP003
-
-    # Whitespace before ':'. Black formats code this way.
-    E203
-
-    # Line break before binary operator
-    W503
-
-    # Missing docstring in public nested class - this is triggered for meta classes in swagger docs
-    D106
+    # D104 Missing docstring in public package
+    D104
 
 exclude = .
     .git,
@@ -49,7 +20,7 @@ exclude = .
     */migrations/*,
     */models.py,
     */tests/*,
-    demo,
+    demo/*,
 
 max-complexity = 20
 
