@@ -21,12 +21,9 @@ Simple Django app for logging Javascript's ``console.log`` logs to Django.
 
 Useful for catching Javascript errors that are not logged by Django natively and would otherwise only be logged to the client's console.
 
-.. mermaid::
-    graph TD
-    U([urls.py]) --> A([API])
-    A --> | logs as info error logger| L([Django logging]) --> TH(3rd party?)
-
-    C(Client) --> T[ Django template] --> I[External JS-logger template] --> J[Javascript] --> A
+.. image:: docs/img/chart.png
+  :width: 1600
+  :alt: Flowchart
 
 Quick start
 -----------
