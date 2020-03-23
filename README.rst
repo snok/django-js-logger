@@ -36,6 +36,13 @@ The app works by posting all logs to an internal API; because of this, it should
 
 If you want to implement this package, and require extra functionality please feel free to commit an issue or a PR. Otherwise, this currently does exactly what I need it to do, and I likely won't change it.
 
+Installation
+------------
+
+Installing with pip::
+
+    pip install django-js-logger
+
 Quick start
 -----------
 
