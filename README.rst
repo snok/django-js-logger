@@ -28,11 +28,11 @@ Useful for catching Javascript errors that are not logged by Django natively and
 
 The app works by posting all logs to an internal API; because of this, it should likely not be run in performance-sensitive production environments.
 
-.. image:: docs/img/flowchart.png
-    :scale: 100%
-    :width: 100%
-    :align: center
-    :alt: Flowchart
+.. raw:: html
+
+   <p align="center">
+       <a><img src="docs/img/flowchart.png" alt='flowchart'></a>
+   </p>
 
 If you want to implement this package, and require extra functionality please feel free to commit an issue or a PR. Otherwise, this currently does exactly what I need it to do, and I likely won't change it.
 
