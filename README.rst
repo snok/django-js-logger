@@ -31,7 +31,7 @@ The app works by posting all logs to an internal API; because of this, it should
 .. raw:: html
 
    <p align="center">
-       <a><img width="750px" src="docs/img/flowchart.png" alt='flowchart'></a>
+       <a><img src="docs/img/flowchart.png" alt='flowchart'></a>
    </p>
 
 If you want to implement this package, and require extra functionality please feel free to commit an issue or a PR. Otherwise, this currently does exactly what I need it to do, and I likely won't change it.
