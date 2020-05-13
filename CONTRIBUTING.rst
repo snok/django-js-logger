@@ -15,4 +15,3 @@ This package is open to contributions. To contribute, please follow these steps:
 
 .. _poetry: https://python-poetry.org/
 .. _pre-commit: https://pre-commit.com/
-
