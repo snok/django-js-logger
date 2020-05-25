@@ -5,7 +5,7 @@ description = "Frontend logging for Django projects"
 authors = ["Sondre Lillebø Gundersen"]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.6"
 djangorestframework = "^3.11.0"
 django = "^3.0.6"
 
