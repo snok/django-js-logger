@@ -11,8 +11,6 @@
         return null;
     }
 
-    // I personally need this for my project - if you read this and need something else / this is causing issues
-    // then please commit and issue, and i'll fix it.
     const CSRFToken = readCookie('csrftoken');
 
     function post(type, msg) {
@@ -27,13 +25,13 @@
 
     // Event listener for error events for posting errors to the backend
     window.addEventListener('error', (event) => {
-        post('error', event.message);
+        post('console_error', event.message);
     });
 
     // Patch console.log function to post all other logs to the backend
     console._overwritten = console.log;
     console.log = function (log) {
-        post('info', log);
+        post('console_log', log);
         console._overwritten(log);
     }
 </script>
