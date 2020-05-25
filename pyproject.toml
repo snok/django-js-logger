@@ -14,10 +14,7 @@ pre-commit = "^2.4.0"
 wheel = "^0.34.2"
 selenium = "^3.141.0"
 coverage = "^5.1"
-
-[build-system]
-requires = ["poetry>=0.12"]
-build-backend = "poetry.masonry.api"
+flake8 = "^3.8.2"
 
 [tool.black]
 line-length = 140
@@ -27,3 +24,6 @@ include = '\.pyi?$'
 exclude = '''
 /(\.eggs|\.git|\.hg|\.mypy_cache|\.tox|\.venv|\venv|\migrations|\static|\__pycache__)
 '''
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
