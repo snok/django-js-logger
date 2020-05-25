@@ -11,6 +11,8 @@ ignore=
     D200
     # D104 Missing docstring in public package
     D104
+    # TYP101 Missing type annotation for self in method
+    TYP101
 
 exclude = .
     .git,
