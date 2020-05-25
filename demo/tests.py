@@ -1,5 +1,4 @@
 from django.contrib.staticfiles.testing import StaticLiveServerTestCase
-from rest_framework.test import APISimpleTestCase
 from selenium.webdriver import Chrome
 
 driver = Chrome()
@@ -23,7 +22,7 @@ class TestLogging(StaticLiveServerTestCase):
         """
         self.selenium.get(self.live_server_url)
         button = self.selenium.find_element_by_id('error')
-        with self.assertLogs(level='ERROR') as log:
+        with self.assertLogs(level='WARNING') as log:
             button.click()
             self.selenium.implicitly_wait(2)  # <-- race condition
             assert 'SyntaxError: Missing initializer in const declaration' in log.output[0]
@@ -38,14 +37,3 @@ class TestLogging(StaticLiveServerTestCase):
             button.click()
             self.selenium.implicitly_wait(2)  # <-- race condition
             assert 'test' in log.output[0]
-
-
-class TestApi(APISimpleTestCase):
-    def test_bad_data(self):
-        """
-        Make sure we're logging a warning when the "pipeline" fails.
-        """
-        with self.assertLogs(level='WARNING') as log:
-            self.client.post('/js-logs/', data={'test': 'bad data'})
-            assert 'Received bad data' in log.output[0]
-            assert len(log.output) == 1  # <-- this was an issue - everything was logging twice

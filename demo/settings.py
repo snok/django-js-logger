@@ -63,19 +63,21 @@ USE_L10N = True
 USE_TZ = True
 STATIC_URL = '/static/'
 
+JS_LOGGER = {'CONSOLE_LOG_LEVEL': 'INFO', 'CONSOLE_ERROR_LEVEL': 'WARNING'}
+
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
-    'formatters': {'simple': {'format': '%(levelname)s %(name)s -- %(message)s'},},
-    'handlers': {'console': {'level': 'DEBUG', 'class': 'logging.StreamHandler', 'formatter': 'simple',},},
+    'formatters': {'simple': {'format': '%(levelname)s %(name)s -- %(message)s'}},
+    'handlers': {'console': {'level': 'DEBUG', 'class': 'logging.StreamHandler', 'formatter': 'simple'}},
     'loggers': {
-        '': {'handlers': ['console'], 'level': 'DEBUG',},
-        'django': {'handlers': ['console'], 'level': 'INFO', 'propagate': True,},
-        'django.server': {'handlers': ['console'], 'level': 'INFO', 'propagate': False,},
-        'django.request': {'handlers': ['console'], 'level': 'DEBUG', 'propagate': False,},
-        'console.log': {'handlers': ['console'], 'level': 'INFO',},
+        '': {'handlers': ['console'], 'level': 'DEBUG'},
+        'django': {'handlers': ['console'], 'level': 'INFO', 'propagate': True},
+        'django.server': {'handlers': ['console'], 'level': 'INFO', 'propagate': False},
+        'django.request': {'handlers': ['console'], 'level': 'DEBUG', 'propagate': False},
+        'console_log': {'handlers': ['console'], 'level': JS_LOGGER['CONSOLE_LOG_LEVEL']},
+        'console_error': {'handlers': ['console'], 'level': JS_LOGGER['CONSOLE_ERROR_LEVEL']},
     },
 }
-
 
 REST_FRAMEWORK: Dict[str, str] = {}
