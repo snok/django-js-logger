@@ -29,7 +29,7 @@ Django Javascript Logger
 
 |
 
-This is a very simple Django app for forwarding your Javascript ``console.log``'s, and console errors, to Django.
+This is a very simple Django app for forwarding console logs and console errors to dedicated Django loggers.
 
 Useful for catching Javascript errors that are not logged by Django natively and would otherwise only be logged to the client's console. We have found this useful for catching runtime errors, from JS running on top of our server-side rendered views.
 
