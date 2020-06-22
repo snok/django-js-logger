@@ -75,8 +75,6 @@ LOGGING = {
         'django': {'handlers': ['console'], 'level': 'INFO', 'propagate': True},
         'django.server': {'handlers': ['console'], 'level': 'INFO', 'propagate': False},
         'django.request': {'handlers': ['console'], 'level': 'DEBUG', 'propagate': False},
-        'console_log': {'handlers': ['console'], 'level': JS_LOGGER['CONSOLE_LOG_LEVEL']},
-        'console_error': {'handlers': ['console'], 'level': JS_LOGGER['CONSOLE_ERROR_LEVEL']},
     },
 }
 
