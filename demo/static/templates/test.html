@@ -1,19 +1,21 @@
-{% include "js-logging/js-logging.html" %}
+{% load static %}
+
 <div class="div" align="center">
     <div class="controls">
-      <button id="error" type="button" onclick="error()">Trigger error</button>
+        <button id="error" type="button" onclick="error()">Trigger error</button>
     </div>
     <div class="controls">
-      <button id="info" type="button" onclick="log()">Trigger console.log</button>
+        <button id="info" type="button" onclick="log()">Trigger console.log</button>
     </div>
 </div>
 
+<script src="static/django_js_logger/logger.js"></script>
 <script>
-    function error(){
+    function error() {
         const badCode = 'const s;';
         eval(badCode);
     }
-    function log(){
+    function log() {
         console.log('test')
     }
 </script>
