@@ -33,7 +33,9 @@ This is a very simple Django app for forwarding your Javascript ``console.log``'
 
 Useful for catching Javascript errors that are not logged by Django natively and would otherwise only be logged to the client's console. We have found this useful for catching runtime errors, from JS running on top of our server-side rendered views.
 
-The way the app works is that it POSTs **all** events to an internal Django API. We haven't tested what performance impact this has, but it likely should not run in performance-sensitive production environments.
+The app works by posting *all* events to an internal Django API. Not sure what impact this has on an apps performance, but it likely should not run anywhere near performance-sensitive production environments. Primarily this is intended to be a debugging aid.
+
+A flowchart of the apps structure looks something like this:
 
 .. raw:: html
 
