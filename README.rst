@@ -31,11 +31,11 @@ Django Javascript Logger
 
 This is a very simple Django app for forwarding console logs and console errors to dedicated Django loggers.
 
-Useful for catching Javascript errors that are not logged by Django natively and would otherwise only be logged to the client's console. We have found this useful for catching runtime errors, from JS running on top of our server-side rendered views.
+Useful for catching Javascript errors that are not logged by Django natively and would otherwise only be logged to the client's console. Can be particularly useful if you have JavaScript running on top of our server-side rendered views.
 
-The app works by posting *all* events to an internal Django API. Not sure what impact this has on an apps performance, but it likely should not run anywhere near performance-sensitive production environments. Primarily this is intended to be a debugging aid.
+The app works by posting *all relevant events* to an internal Django API, which logs them to one of two loggers. Not sure what impact this has on an apps performance, but it likely should not run anywhere near performance-sensitive production environments. Primarily this is intended to be a debugging aid.
 
-A flowchart of the apps structure looks something like this:
+A flowchart of the app's structure looks something like this:
 
 .. raw:: html
 
