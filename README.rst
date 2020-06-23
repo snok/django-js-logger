@@ -40,7 +40,7 @@ A flowchart of the app's structure looks something like this:
 .. raw:: html
 
    <p align="center">
-       <a><img src="docs/img/flowchart.png" alt='flowchart' width="400px"></a>
+       <a><img src="docs/img/flowchart.png" alt='flowchart' width="300px"></a>
    </p>
 
 The package is open to contributions.
