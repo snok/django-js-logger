@@ -39,8 +39,8 @@ A flowchart of the app's structure looks something like this:
 
 .. raw:: html
 
-   <p align="center" style="width:400">
-       <a><img src="docs/img/flowchart.png" alt='flowchart'></a>
+   <p align="center">
+       <a><img src="docs/img/flowchart.png" alt='flowchart' width="400"></a>
    </p>
 
 The package is open to contributions.
