@@ -12,29 +12,38 @@ Django Javascript Logger
     :target: https://pypi.python.org/pypi/django-js-logger
 
 .. image:: https://codecov.io/gh/sondrelg/django-js-logger/branch/master/graph/badge.svg
+    :alt: Code coverage
     :target: https://codecov.io/gh/sondrelg/django-js-logger/
 
 .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+    :alt: Code style black
     :target: https://pypi.org/project/django-swagger-tester/
 
 .. image:: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white
+    :alt: Pre-commit enabled
     :target: https://github.com/pre-commit/pre-commit
+
+.. image:: http://www.mypy-lang.org/static/mypy_badge.svg
+    :alt: Checked with mypy
+    :target: http://mypy-lang.org/
 
 |
 
-Simple Django app for logging Javascript's ``console.log`` logs to Django.
+This is a very simple Django app for forwarding console logs and console errors to dedicated Django loggers.
 
-Useful for catching Javascript errors that are not logged by Django natively and would otherwise only be logged to the client's console.
+Useful for catching Javascript errors that are not logged by Django natively and would otherwise only be logged to the client's console. Can be particularly useful if you have JavaScript running on top of our server-side rendered views.
 
-The app works by posting all logs to an internal API; because of this, it should likely not be run in performance-sensitive production environments.
+The app works by posting *all relevant events* to an internal Django API, which logs them to one of two loggers. Not sure what impact this has on an apps performance, but it likely should not run anywhere near performance-sensitive production environments. Primarily this is intended to be a debugging aid.
+
+A flowchart of the app's structure looks something like this:
 
 .. raw:: html
 
    <p align="center">
-       <a><img src="docs/img/flowchart.png" alt='flowchart'></a>
+       <a><img src="docs/img/flowchart.png" alt='flowchart' width="350px"></a>
    </p>
 
-If you want to implement this package, and require extra functionality please feel free to commit an issue or a PR. Otherwise, this currently does exactly what I need it to do, and I likely won't change it.
+The package is open to contributions.
 
 Installation
 ------------
@@ -43,10 +52,14 @@ Installing with pip::
 
     pip install django-js-logger
 
+Installing with poetry::
+
+    poetry add django-js-logger
+
 Quick start
 -----------
 
-1. Add "js_logger" to your INSTALLED_APPS settings::
+1. Add ``js_logger`` to your INSTALLED_APPS settings::
 
     INSTALLED_APPS = [
         ...
@@ -57,61 +70,15 @@ Quick start
 
     path('js-logs/', include('js_logger.urls')),
 
-3. Add the required static file to your project by running ``manage.py collectstatic``, or by manually adding the following code to ``<your-templates-folder>/js-logging/js-logging.html``::
+3. Optionally, specify your logging preferences by adding ``JS_LOGGER`` to your settings::
 
-    <script type="text/javascript">
+    JS_LOGGER = {
+        'CONSOLE_LOG_LEVEL': 'INFO',
+        'CONSOLE_ERROR_LEVEL': 'WARNING'
+    }
 
-        function readCookie(name) {
-            let nameEQ = name + "=";
-            let ca = document.cookie.split(';');
-            for (let i = 0; i < ca.length; i++) {
-                let c = ca[i];
-                while (c.charAt(0) === ' ') c = c.substring(1, c.length);
-                if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
-            }
-            return null;
-        }
-        const CSRFToken = readCookie('csrftoken');
+4. Add the required static file to your project by running ``manage.py collectstatic``. This should add a folder, ``django_js_logger`` with the file ``logger.js``. If this is not the case, you can copy the file manually from the demo project above.
 
-        function post(type, msg) {
-            /* Sends logs to a backend API, which logs the message to a python logger */
-            fetch('/js-logs/', {
-                    method: 'POST',
-                    headers: {'X-CSRFToken': CSRFToken, 'Content-Type': 'application/json'},
-                    body: JSON.stringify({'type': type, 'msg': msg})
-                }
-            );
-        }
+5. Import ``logger.js`` in the views you wish to log from by adding a JS import to your templates::
 
-        // Event listener for error events for posting errors to the backend
-        window.addEventListener('error', (event) => {
-            post('error', event.message);
-        });
-
-        // Patch console.log function to post all other logs to the backend
-        console._overwritten = console.log;
-        console.log = function (log) {
-            post('info', log);
-            console._overwritten(log);
-        }
-    </script>
-
-
-
-4. Include the template where ever you wish for logs to be sent in from (perhaps a base or header template)::
-
-    <head>
-    ...
-    {% include "js-logging/js-logging.html" %}
-    ...
-    </head>
-
-
-5. Add ``console.log`` as a logger in your logging configuration::
-
-    'console.log': {
-        'level': 'INFO',
-        ...
-    },
-
-Note: This package will log all `console.log` calls in your frontend as ``INFO`` logs, and will log javascript errors as ``ERROR`` logs.
+    <script src="static/django_js_logger/logger.js"></script>
