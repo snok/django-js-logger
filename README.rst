@@ -39,7 +39,7 @@ A flowchart of the app's structure looks something like this:
 
 .. raw:: html
 
-   <p align="center">
+   <p align="center" style="width:400">
        <a><img src="docs/img/flowchart.png" alt='flowchart'></a>
    </p>
 
