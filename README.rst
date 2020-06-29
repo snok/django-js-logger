@@ -1,5 +1,7 @@
 .. raw:: html
 
+    <h1 >Django Javascript Logger</h1>
+
     <p>
         <a href="https://pypi.org/project/django-js-logger/">
             <img src="https://img.shields.io/pypi/v/django-js-logger.svg" alt="Package version">
@@ -28,7 +30,6 @@
 
     </p>
 
-    <h2 >Django Javascript Logger</h2>
 
 This is a very simple Django app for forwarding console logs and console errors to dedicated Django loggers.
 
