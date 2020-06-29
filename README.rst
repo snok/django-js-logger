@@ -1,7 +1,3 @@
-========================
-Django Javascript Logger
-========================
-
 .. image:: https://img.shields.io/pypi/v/django-js-logger.svg
     :target: https://pypi.org/project/django-js-logger/
 
@@ -28,6 +24,12 @@ Django Javascript Logger
 .. image:: http://www.mypy-lang.org/static/mypy_badge.svg
     :alt: Checked with mypy
     :target: http://mypy-lang.org/
+
+|
+
+========================
+Django Javascript Logger
+========================
 
 |
 
