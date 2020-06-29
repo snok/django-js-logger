@@ -25,5 +25,5 @@
 #          poetry run flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 #      - name: Test with pytest
 #        run: |
-#          poetry run pytest --cov=js_logger --verbose --color=yes  --assert=plain
+#          poetry run pytest --cov=django_js_logger --verbose --color=yes  --assert=plain
 #          poetry run coverage report

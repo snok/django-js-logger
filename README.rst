@@ -59,16 +59,16 @@ Installing with poetry::
 Quick start
 -----------
 
-1. Add ``js_logger`` to your INSTALLED_APPS settings::
+1. Add ``django_js_logger`` to your INSTALLED_APPS settings::
 
     INSTALLED_APPS = [
         ...
-        'js_logger',
+        'django_js_logger',
     ]
 
 2. Include the packages URLconf in your project urls.py like this::
 
-    path('js-logs/', include('js_logger.urls')),
+    path('js-logs/', include('django_js_logger.urls')),
 
 3. Optionally, specify your logging preferences by adding ``JS_LOGGER`` to your settings::
 
