@@ -2,9 +2,6 @@
 
     <h2 align="center">Django Javascript Logger</h2>
     <p align="center">
-        <em>Frontend logging for Django projects</em><br><br>
-    </p>
-    <p align="center">
         <a href="https://pypi.org/project/django-js-logger/">
             <img src="https://img.shields.io/pypi/v/django-js-logger.svg" alt="Package version">
         </a>
