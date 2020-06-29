@@ -1,3 +1,7 @@
+========================
+Django Javascript Logger
+========================
+
 .. image:: https://img.shields.io/pypi/v/django-js-logger.svg
     :target: https://pypi.org/project/django-js-logger/
 
@@ -11,8 +15,6 @@
     :alt: Code coverage
     :target: https://codecov.io/gh/sondrelg/django-js-logger/
 
-|
-
 .. image:: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white
     :alt: Pre-commit enabled
     :target: https://github.com/pre-commit/pre-commit
@@ -24,12 +26,6 @@
 .. image:: http://www.mypy-lang.org/static/mypy_badge.svg
     :alt: Checked with mypy
     :target: http://mypy-lang.org/
-
-|
-
-========================
-Django Javascript Logger
-========================
 
 |
 
