@@ -1,6 +1,6 @@
 .. raw:: html
 
-    <p align="center">
+    <p>
         <a href="https://pypi.org/project/django-js-logger/">
             <img src="https://img.shields.io/pypi/v/django-js-logger.svg" alt="Package version">
         </a>
