@@ -26,7 +26,7 @@ def get_logger(level: str, logger_name: str) -> Callable:
     elif level == 'CRITICAL':
         return logging.getLogger(logger_name).critical
     else:
-        raise ImproperlyConfigured(f'The log level for the `{logger_name}` ' f'logger was set as `{level}` which is not a valid log level.')
+        raise ImproperlyConfigured(f'The log level for the `{logger_name}` logger was set as `{level}` ' f'which is not a valid log level.')
 
 
 class Settings(object):
@@ -41,7 +41,7 @@ class Settings(object):
         self.CONSOLE_LOG_LEVEL = 'INFO'
         self.CONSOLE_ERROR_LEVEL = 'WARNING'
 
-        if not hasattr(django_settings, 'JS_LOGGER'):
+        if not hasattr(django_settings, 'JS_LOGGER') or not django_settings.JS_LOGGER:
             return
 
         package_settings = django_settings.JS_LOGGER
