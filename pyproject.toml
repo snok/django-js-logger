@@ -3,11 +3,12 @@ name = "django-js-logger"
 version = "1.0.0"
 description = "Frontend logging for Django projects"
 authors = ["Sondre Lillebø Gundersen"]
+readme = "docs/PYPI_README.rst"
 
 [tool.poetry.dependencies]
 python = "^3.6.1"
-djangorestframework = "^3.11.0"
-django = "^3.0.6"
+djangorestframework = "^3"
+django = "^2.2 || ^3.0"
 
 [tool.poetry.dev-dependencies]
 pre-commit = "^2.4.0"

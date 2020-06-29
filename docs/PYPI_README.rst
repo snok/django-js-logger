@@ -1,37 +1,31 @@
-.. raw:: html
+========================
+Django Javascript Logger
+========================
 
-    <h1>Django Javascript Logger</h1>
-    <p align="center">
-      <em>Frontend logging for Django projects</em>
-    </p>
+.. image:: https://img.shields.io/pypi/v/django-js-logger.svg
+    :target: https://pypi.org/project/django-js-logger/
 
-|
+.. image:: https://img.shields.io/pypi/pyversions/django-js-logger.svg
+    :target: https://pypi.org/project/django-js-logger/
 
-.. raw:: html
+.. image:: https://img.shields.io/pypi/djversions/django-js-logger.svg
+    :target: https://pypi.python.org/pypi/django-js-logger
 
-    <p align="center">
-        <a href="https://pypi.org/project/django-js-logger/">
-            <img src="https://img.shields.io/pypi/v/django-js-logger.svg" alt="Package version">
-        </a>
-        <a href="https://pypi.org/project/django-js-logger/">
-            <img src="https://img.shields.io/pypi/pyversions/django-js-logger.svg" alt="Compatible python version">
-        </a>
-        <a href="https://pypi.python.org/pypi/django-js-logger">
-            <img src="https://img.shields.io/pypi/djversions/django-js-logger.svg" alt="Compatible django versions">
-        </a>
-        <a href="https://codecov.io/gh/sondrelg/django-js-logger/">
-            <img src="https://codecov.io/gh/sondrelg/django-js-logger/branch/master/graph/badge.svg" alt="Code coverage">
-        </a>
-        <a href="https://github.com/pre-commit/pre-commit">
-            <img src="https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white" alt="Pre-commit enabled">
-        </a>
-        <a href="https://pypi.org/project/django-swagger-tester/">
-            <img src="https://img.shields.io/badge/code%20style-black-000000.svg" alt="Code style black">
-        </a>
-        <a href="http://mypy-lang.org/">
-            <img src="http://www.mypy-lang.org/static/mypy_badge.svg" alt="Checked with mypy">
-        </a>
+.. image:: https://codecov.io/gh/sondrelg/django-js-logger/branch/master/graph/badge.svg
+    :alt: Code coverage
+    :target: https://codecov.io/gh/sondrelg/django-js-logger/
 
+.. image:: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white
+    :alt: Pre-commit enabled
+    :target: https://github.com/pre-commit/pre-commit
+
+.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+    :alt: Code style black
+    :target: https://pypi.org/project/django-swagger-tester/
+
+.. image:: http://www.mypy-lang.org/static/mypy_badge.svg
+    :alt: Checked with mypy
+    :target: http://mypy-lang.org/
 
 |
 
@@ -43,11 +37,7 @@ The app works by posting *all relevant events* to an internal Django API, which 
 
 A flowchart of the app's structure looks something like this:
 
-.. raw:: html
-
-   <p align="center">
-       <a><img src="docs/img/flowchart.png" alt='flowchart' width="350px"></a>
-   </p>
+.. image:: docs/img/flowchart.png
 
 The package is open to contributions.
 
