@@ -1,7 +1,7 @@
 .. raw:: html
 
-    <h1>Django Javascript Logger</h1>
     <p align="center">
+    <h2>Django Javascript Logger</h2>
       <em>Frontend logging for Django projects</em>
     </p>
 
