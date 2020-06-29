@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "django-js-logger"
-version = "0.1.0"
+version = "1.0.0"
 description = "Frontend logging for Django projects"
 authors = ["Sondre Lillebø Gundersen"]
 
