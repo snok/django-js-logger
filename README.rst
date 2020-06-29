@@ -1,6 +1,6 @@
 .. raw:: html
 
-    <h1 align="center">✏ Django Javascript Logger 📝</h1>
+    <h1 align="center">Django Javascript Logger 📝</h1>
 
     <p align="center">
         <a href="https://pypi.org/project/django-js-logger/">
