@@ -5,7 +5,7 @@ from django.contrib.staticfiles.testing import StaticLiveServerTestCase
 from django.core.exceptions import ImproperlyConfigured
 from django.test import SimpleTestCase
 
-from js_logger.config import get_logger, Settings
+from django_js_logger.config import get_logger, Settings
 from selenium.webdriver import Chrome
 
 

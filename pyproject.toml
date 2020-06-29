@@ -1,13 +1,17 @@
 [tool.poetry]
 name = "django-js-logger"
-version = "0.1.0"
+version = "1.0.0"
 description = "Frontend logging for Django projects"
-authors = ["Sondre Lillebø Gundersen"]
+authors = ["Sondre Lillebø Gundersen <sondrelg@live.no>"]
+readme = "docs/PYPI_README.rst"
+homepage = "https://github.com/snok/django-js-logger"
+license = "BSD-4-Clause"
+keywords = ['django']
 
 [tool.poetry.dependencies]
 python = "^3.6.1"
-djangorestframework = "^3.11.0"
-django = "^3.0.6"
+djangorestframework = "^3"
+django = "^2.2 || ^3.0"
 
 [tool.poetry.dev-dependencies]
 pre-commit = "^2.4.0"

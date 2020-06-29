@@ -3,7 +3,7 @@ from rest_framework.response import Response
 from rest_framework.status import HTTP_204_NO_CONTENT
 from rest_framework.views import APIView
 
-from js_logger.config import settings
+from django_js_logger.config import settings
 
 loggers = {
     'console_log': settings.CONSOLE_LOG_LOGGER,

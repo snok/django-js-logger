@@ -5,7 +5,7 @@
 # getting the report --> `coverage report`
 
 [run]
-include = js_logger/*
+include = django_js_logger/*
 
 [report]
 exclude_lines =
