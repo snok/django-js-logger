@@ -1,15 +1,11 @@
 .. raw:: html
 
     <p align="center">
-    <h2>Django Javascript Logger</h2>
-      <em>Frontend logging for Django projects</em>
-    </p>
 
-|
+        <h2>Django Javascript Logger</h2>
 
-.. raw:: html
+        <em>Frontend logging for Django projects</em><br><br>
 
-    <p align="center">
         <a href="https://pypi.org/project/django-js-logger/">
             <img src="https://img.shields.io/pypi/v/django-js-logger.svg" alt="Package version">
         </a>
@@ -22,6 +18,7 @@
         <a href="https://codecov.io/gh/sondrelg/django-js-logger/">
             <img src="https://codecov.io/gh/sondrelg/django-js-logger/branch/master/graph/badge.svg" alt="Code coverage">
         </a>
+        <br>
         <a href="https://github.com/pre-commit/pre-commit">
             <img src="https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white" alt="Pre-commit enabled">
         </a>
