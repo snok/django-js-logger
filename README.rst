@@ -1,8 +1,8 @@
 .. raw:: html
 
-    <h1 >Django Javascript Logger</h1>
+    <h1 align="center">Django Javascript Logger</h1>
 
-    <p>
+    <p align="center">
         <a href="https://pypi.org/project/django-js-logger/">
             <img src="https://img.shields.io/pypi/v/django-js-logger.svg" alt="Package version">
         </a>
