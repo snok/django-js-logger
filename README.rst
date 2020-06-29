@@ -29,8 +29,9 @@
             <img src="http://www.mypy-lang.org/static/mypy_badge.svg" alt="Checked with mypy">
         </a>
 
+        <br>
 
-|
+    </p>
 
 This is a very simple Django app for forwarding console logs and console errors to dedicated Django loggers.
 
