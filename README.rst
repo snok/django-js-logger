@@ -6,11 +6,11 @@
         <a href="https://pypi.org/project/django-js-logger/">
             <img src="https://img.shields.io/pypi/v/django-js-logger.svg" alt="Package version">
         </a>
-        <a href="https://pypi.org/project/django-js-logger/">
-            <img src="https://img.shields.io/pypi/pyversions/django-js-logger.svg" alt="Compatible python version">
+        <a href="https://pypi.org/project/django-swagger-tester/">
+            <img src="https://img.shields.io/badge/python-3.6%2B-blue" alt="Supported Python versions">
         </a>
-        <a href="https://pypi.python.org/pypi/django-js-logger">
-            <img src="https://img.shields.io/pypi/djversions/django-js-logger.svg" alt="Compatible django versions">
+        <a href="https://pypi.python.org/pypi/django-swagger-tester">
+            <img src="https://img.shields.io/badge/django%20versions-2.2%2B-blue" alt="Supported Django versions">
         </a>
         <a href="https://codecov.io/gh/snok/django-js-logger/">
             <img src="https://codecov.io/gh/snok/django-js-logger/branch/master/graph/badge.svg" alt="Code coverage">
@@ -25,9 +25,7 @@
         <a href="http://mypy-lang.org/">
             <img src="http://www.mypy-lang.org/static/mypy_badge.svg" alt="Checked with mypy">
         </a>
-
         <br>
-
     </p>
 
 
