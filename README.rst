@@ -6,10 +6,10 @@
         <a href="https://pypi.org/project/django-js-logger/">
             <img src="https://img.shields.io/pypi/v/django-js-logger.svg" alt="Package version">
         </a>
-        <a href="https://pypi.org/project/django-swagger-tester/">
+        <a href="https://pypi.org/project/django-js-logger/">
             <img src="https://img.shields.io/badge/python-3.6%2B-blue" alt="Supported Python versions">
         </a>
-        <a href="https://pypi.python.org/pypi/django-swagger-tester">
+        <a href="https://pypi.org/project/django-js-logger/">
             <img src="https://img.shields.io/badge/django%20versions-2.2%2B-blue" alt="Supported Django versions">
         </a>
         <a href="https://codecov.io/gh/snok/django-js-logger/">
@@ -19,7 +19,7 @@
         <a href="https://github.com/pre-commit/pre-commit">
             <img src="https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white" alt="Pre-commit enabled">
         </a>
-        <a href="https://pypi.org/project/django-swagger-tester/">
+        <a href="https://pypi.org/project/django-js-logger/">
             <img src="https://img.shields.io/badge/code%20style-black-000000.svg" alt="Code style black">
         </a>
         <a href="http://mypy-lang.org/">
