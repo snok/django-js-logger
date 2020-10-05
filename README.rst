@@ -12,8 +12,8 @@
         <a href="https://pypi.python.org/pypi/django-js-logger">
             <img src="https://img.shields.io/pypi/djversions/django-js-logger.svg" alt="Compatible django versions">
         </a>
-        <a href="https://codecov.io/gh/sondrelg/django-js-logger/">
-            <img src="https://codecov.io/gh/sondrelg/django-js-logger/branch/master/graph/badge.svg" alt="Code coverage">
+        <a href="https://codecov.io/gh/snok/django-js-logger/">
+            <img src="https://codecov.io/gh/snok/django-js-logger/branch/master/graph/badge.svg" alt="Code coverage">
         </a>
         <br>
         <a href="https://github.com/pre-commit/pre-commit">
