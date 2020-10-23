@@ -24,7 +24,7 @@ jobs:
           poetry install
       - name: Test with pytest
         run: |
-          poetry run pytest --cov=django_swagger_tester --verbose --color=yes  --assert=plain --cov-report=xml
+          poetry run pytest --cov=django_js_logger --verbose --color=yes  --assert=plain --cov-report=xml
           poetry run coverage report
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v1
