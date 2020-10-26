@@ -57,6 +57,8 @@ jobs:
       - name: Install dependencies
         run: |
           ls -la $HOME/.poetry/env
+          poetry config --list
+          ls -la
           source $HOME/.poetry/env
           poetry install
         if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
@@ -64,11 +66,15 @@ jobs:
       - name: Install django ${{ matrix.django-version }}
         run: |
           ls -la $HOME/.poetry/env
+          poetry config --list
+          ls -la
           source $HOME/.poetry/env
           python -m pip install "Django==${{ matrix.django-version }}" --upgrade --force-reinstall
       - name: Run tests
         run: |
           ls -la $HOME/.poetry/env
+          poetry config --list
+          ls -la
           source $HOME/.poetry/env
           poetry run pytest --cov=django_js_logger --verbose --color=yes --assert=plain
           poetry run coverage report
