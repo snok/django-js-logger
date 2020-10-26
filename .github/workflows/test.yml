@@ -56,15 +56,15 @@ jobs:
           key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}-4
       - name: Install dependencies
         run: |
-          source $HOME/.poetry/env
+          poetry env use python
           poetry install
         if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
       - name: Install django ${{ matrix.django-version }}
         run: |
-          source $HOME/.poetry/env
+          poetry env use python
           python -m pip install "Django==${{ matrix.django-version }}" --upgrade --force-reinstall
       - name: Run tests
         run: |
-          source $HOME/.poetry/env
+          poetry env use python
           poetry run pytest --cov=django_js_logger --verbose --color=yes --assert=plain
           poetry run coverage report
